@@ -1,13 +1,13 @@
 # Import libraries
 from telebot.async_telebot import AsyncTeleBot
 import asyncio
-from decouple import config
+import os
 import constants as keys
 import processor
 import generator
 import url
 
-BOT_KEY = config('BOT_KEY') # Replace this with your own BOT_KEY
+BOT_KEY = os.environ.get("BOT_KEY") # Replace this with your own BOT_KEY
 bot = AsyncTeleBot(BOT_KEY)
 
 print("Bot started...")
