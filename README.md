@@ -1,7 +1,7 @@
 # AlgoPortal
-
+#### Video Demo: https://youtu.be/Y9EUVrmwvmc
 #### Description:
-AlgoPortal is a Telegram bot API that's capable of fetching codes from the internet for users in a matter of seconds. It automates the process of googling and looking through several websites to find code and so this bot offers a quicker and less laborious method of fetching code from the internet. AlgoPortal can be useful in several occasions: when preparing for a CS quiz (class?=data structures and algorithm) quiz, when preparing for a software engineering interview, when working on a CS project, etc. 
+AlgoPortal is a Telegram bot API that's capable of fetching codes from the internet for users in a matter of seconds. It automates the process of googling and looking through several websites to find code and so this bot offers a quicker and less laborious method of fetching code from the internet. AlgoPortal can be useful in several occasions: when preparing for a CS (class?=data structures and algorithm) quiz, when preparing for a software engineering interview, when working on a CS project, etc. 
 
 The steps below state the processes AlgoPortal follows to perform it's primary function:
 - User sends message to AlgoPortal in the format '"query=algorithm name or problem description" programming language implementation'
