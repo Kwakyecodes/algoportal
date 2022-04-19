@@ -45,8 +45,10 @@ def generate_code(url: str, programming_language: str):
         else:
             languages[lang] = [ind]
             
-    # Change python to python3
-    if "python" in programming_language:
+    # python and python3 should should be considered as the same language 
+    if "python" in languages and "python" in programming_language:
+        programming_language = "python"
+    elif "python3" in languages and "python" in programming_language:
         programming_language = "python3"
         
     # Check if there are any codes in that webpage
