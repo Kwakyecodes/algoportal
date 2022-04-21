@@ -9,7 +9,7 @@ HELP_INFO = """I can help you find any algorithm or code you want in your langua
 
 To find a solution or algorithm, just send me a message. If you want a code for a specific language, specify your language of choice.
 For example: Cycle detection algorithm linked list Python
-Another example: c++ how to collect user input
+Another example: c how to collect user input
 
 A little secret about me: I actually don't know all those algorithms by heart, but I'm very good at finding them on the internet * cough cough * ~GeeksforGeeks~ ^__^
 """

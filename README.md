@@ -4,7 +4,7 @@
 AlgoPortal is a Telegram bot API that's capable of fetching codes from the internet for users in a matter of seconds. It automates the process of googling and looking through several websites to find code and so this bot offers a quicker and less laborious method of fetching code from the internet. AlgoPortal can be useful in several occasions: when preparing for a CS (class?=data structures and algorithm) quiz, when preparing for a software engineering interview, when working on a CS project, etc. 
 
 The steps below state the processes AlgoPortal follows to perform it's primary function:
-- User sends message to AlgoPortal in the format '"query=algorithm name or problem description" programming language implementation'
+- User sends a message to AlgoPortal
 - AlgoPortal processes the message and extracts the query and programming language
 - AlgoPortal perfroms a google search of the query and gets the html code of the search result page in the form of a string
 - AlgoPortal looks through the websites in the search results page and finds the first link to GeeksforGeeks. GeeksforGeeks is a website that provides a variety of services for people to learn, thrive and also have fun. They have articles on almost every algorithm or programming problem among others. 
