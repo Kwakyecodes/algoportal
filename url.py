@@ -10,6 +10,8 @@ def get_data(url: str) -> str:
 
 def get_link(query: str) -> str:
     '''Get link to Geeks for Geeks code for query and return it'''
+    query = query.replace("+", "%2B") # For queries containing c++ language
+    query = query.replace("#", "%23") # For queries containing c# language
     query = query.replace(" ", "+")
     google = "https://www.google.com/search?q=geeks+for+geeks+" + query
     html = get_data(url=google)
