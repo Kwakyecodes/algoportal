@@ -45,25 +45,40 @@ def generate_code(url: str, programming_language: str):
         else:
             languages[lang] = [ind]
             
+    # Get all codes into code_container
+    code_container = soup.find_all("div", class_='code-container')
+    
+    # Check if there are any codes on that webpage
+    if not code_container:
+        return {"error": keys.NO_CODE}
+    
+    solutions = []
+    
+    if not programming_language or not languages:
+        for i in range(len(code_container)):
+            code_lines = get_code_lines(hmtl_article=f"{code_container[i]}")
+            solution = ''
+            for line in code_lines:
+                if "class" in line:
+                    code = extract_text(f"{line}")
+                    solution += code + '\n'
+                    
+            solutions.append(solution)
+            
+        return solutions
+            
     # python and python3 should should be considered as the same language 
     if "python" in languages and "python" in programming_language:
         programming_language = "python"
     elif "python3" in languages and "python" in programming_language:
         programming_language = "python3"
-        
-    # Check if there are any codes in that webpage
-    if not languages:
-        return {"error": keys.NO_CODE}
     
     # Check if programming_language is among the available langauges
     if programming_language not in languages:
         return {"error": f"{programming_language} implementation not found"} 
-        
-    code_container = soup.find_all("div", class_='code-container')
     
     # Get hmtl lines that contain the code text and extract the text into solutions
     solutions = []
-    count = 1
     for i in languages[programming_language]:
         code_lines = get_code_lines(hmtl_article=f"{code_container[i]}")
         solution = ''
