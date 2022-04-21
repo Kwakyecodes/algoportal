@@ -63,8 +63,8 @@ def generate_code(url: str, programming_language: str):
                     code = extract_text(f"{line}")
                     solution += code + '\n'
                     
-            solution.replace("&lt;", "<") # Fix < bug
-            solution.replace("&gt;", ">") # Fix > bug
+            solution = solution.replace("&lt;", "<") # Fix < bug
+            solution = solution.replace("&gt;", ">") # Fix > bug
             solutions.append(solution)
             
         return solutions
@@ -89,8 +89,8 @@ def generate_code(url: str, programming_language: str):
                 code = extract_text(f"{line}")
                 solution += code + '\n'
                 
-        solution.replace("&lt;", "<") # Fix < bug
-        solution.replace("&gt;", ">") # Fix > bug
+        solution = solution.replace("&lt;", "<") # Fix < bug
+        solution = solution.replace("&gt;", ">") # Fix > bug
         solutions.append(solution)
     
     return solutions 
