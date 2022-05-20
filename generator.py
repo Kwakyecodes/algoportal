@@ -4,6 +4,8 @@ import re
 import url as U
 import constants as keys
 from bs4 import BeautifulSoup
+from processor import process
+from url import get_link
 
 
 def get_code_lines(hmtl_article: str) -> list:
